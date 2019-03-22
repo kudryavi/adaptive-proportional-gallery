@@ -1,0 +1,159 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+html, body{
+    margin: 0;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+.container {
+	max-width: 1290px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.relation {
+	position: relative;
+}
+
+.relation__ratio {
+	height: 0;
+	padding-top: 64.1%;
+}
+
+.relation__wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: space-between;
+}
+
+.relation__big-img {
+	width: 36%;
+	flex: 1 1 100%;
+}
+
+.relation__row {
+	width: 31%;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;	
+}
+
+.relation__row1 {
+	order: -1;
+}
+
+.relation__img {
+	flex: 1 1 50%;
+}
+
+.relation__img:nth-child(odd) {
+	margin-bottom: 4%;
+}
+
+@media screen and (max-width: 780px) {
+	.relation__wrapper {
+		justify-content: center;
+		align-content: center;
+	}
+
+	.relation__ratio {
+		padding-top: 115.9%;
+	}
+
+	.relation__big-img {
+		width: 65%;
+		margin-right: 1%;
+	}
+
+	.relation__row {
+		width: 28%;
+		margin-top: 1%;
+		flex-basis: 47%;
+	}
+
+	.relation__row:last-child {
+		margin-top: 0;
+	}
+
+	.relation__row1 {
+		order: 1;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.relation__ratio {
+		display: none;
+	}
+
+	.relation__wrapper {
+		align-items: center;
+		flex-wrap: nowrap;
+		position: static;
+	}
+
+	.relation__big-img {
+		width: auto;
+		margin-right: 0;
+		margin-bottom: 2%;
+	}
+
+	.relation__row {
+		width: auto;
+	}
+}
